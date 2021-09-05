@@ -8,10 +8,10 @@ const Characters = ({ characters = [] }) => {
                     <div key={index} className="col mb-4">
                         <div className="card">
                             <img src={item.image} alt="" />
-                            <div className="card-bady">
+                            <div className="card-body">
                                 <h5 className="card-title">{item.name}</h5>
-                                <p>Specie: {item.species}</p>
-                                <p>Location: {item.location.name}</p>
+                                <p><b>Specie:</b> {item.species}</p>
+                                <p><b>Location:</b> {item.location.name}</p>
                             </div>
                         </div>
                     </div>

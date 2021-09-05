@@ -11,27 +11,28 @@ const Pagination = ({ prev, next, onPrevious, onNext }) => {
     }
 
     return (
-        <nav className="my-5">
-            <ul className="pagination justify-content-center">
-                {
-                    prev ?
-                        <li className="page-item">
-                            <button className="page-link" onClick={handlePrevious}>Previous</button>
-                        </li>
-                        :
-                        null
-                }
+        <div className="container">
+            <ul className="pagination justify-content-end">
+                {prev ?
+                    <li className="page-item">
+                        <button className="btn btn-outline-dark" onClick={handlePrevious} >
+                            <span aria-hidden="true">&laquo;</span>
+                            <span className="sr-only"> Previous</span>
+                        </button >
+                        <p className="box-spece">...</p>
+                    </li >
+                    : null}
 
-                {
-                    next ?
-                        <li className="page-item">
-                            <button className="page-link" onClick={handleNext}>Next</button>
-                        </li>
-                        :
-                        null
-                }
-            </ul>
-        </nav>
+                {next ?
+                    <li className="page-item">
+                        <button className="btn btn-outline-dark" onClick={handleNext}>
+                            <span className="sr-only">Next </span>
+                            <span aria-hidden="true">&raquo;</span>
+                        </button>
+                    </li>
+                    : null}
+            </ul >
+        </div >
     )
 }
 
